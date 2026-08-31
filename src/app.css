@@ -1,0 +1,722 @@
+@import "@isweibin/vector-sigma";
+
+/* Vector Sigma core is imported above; Ratchet Meds application styles follow. */
+.app-shell {
+  width: min(100%, 720px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 0 var(--space-5) calc(92px + env(safe-area-inset-bottom));
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: var(--space-4) 0 var(--space-5);
+  border-bottom: var(--stroke-strong) solid var(--ink);
+}
+
+.brand-lockup {
+  display: grid;
+  gap: 6px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--ink);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.045em;
+}
+
+.brand > span {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.brand-badge {
+  display: inline-grid;
+  min-height: 28px;
+  place-items: center;
+  padding: 0 10px;
+  border: var(--stroke-strong) solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: var(--shadow-1);
+  font-size: 0.7rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+.content {
+  padding: var(--space-5) 0 var(--space-6);
+}
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.page-head h1,
+.welcome-card h1 {
+  margin-bottom: var(--space-2);
+}
+
+.page-head p,
+.welcome-card p,
+.section-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.page-head p {
+  max-width: 34rem;
+}
+
+.welcome-card {
+  max-width: 40rem;
+  padding: var(--space-7) 0;
+}
+
+.welcome-card .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.welcome-card > p:not(.eyebrow) {
+  max-width: 36rem;
+  margin-bottom: var(--space-5);
+  line-height: 1.7;
+}
+
+/* Plan */
+.plan-section {
+  padding: var(--space-5);
+}
+
+.plan-fields {
+  width: min(100%, 19rem);
+}
+
+.plan-hint,
+.plan-summary {
+  margin: var(--space-3) 0 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.plan-summary {
+  font-family: var(--font-mono);
+}
+
+/* Page sections */
+.dashboard-section,
+.settings-section {
+  margin-top: var(--space-7);
+}
+
+.section-heading,
+.person-heading,
+.medication-person-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.section-heading {
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--stroke-strong) solid var(--ink);
+}
+
+.section-heading h2,
+.person-heading h3,
+.medication-person-heading h2 {
+  margin: 0;
+}
+
+.person-heading h3,
+.medication-person-heading h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.section-heading h2 {
+  font-weight: var(--weight-bold);
+}
+
+.section-heading p {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+
+.person-heading {
+  margin-top: var(--space-5);
+  margin-bottom: 0;
+  padding: var(--space-2) 0;
+}
+
+.person-block:first-child .person-heading {
+  margin-top: 0;
+}
+
+.person-heading h3 {
+  font-size: var(--text-md);
+}
+
+.person-heading span,
+.medication-person-heading span {
+  flex: none;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.medication-list {
+  display: grid;
+  border-top: var(--stroke-thin) solid var(--line);
+}
+
+.medication-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-5);
+  align-items: center;
+  min-height: 80px;
+  padding: var(--space-4) 0;
+  border-bottom: var(--stroke-thin) solid var(--line);
+}
+
+.medication-copy,
+.stock-copy,
+.bring-amount {
+  min-width: 0;
+}
+
+.medication-title-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: baseline;
+}
+
+.medication-title-line strong {
+  overflow-wrap: anywhere;
+  font-size: var(--text-md);
+  line-height: 1.4;
+}
+
+.medication-title-line span,
+.medication-copy small,
+.stock-copy small,
+.bring-amount small,
+.manage-row small,
+.settings-row small {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.medication-copy small,
+.manage-row small,
+.settings-row small {
+  display: block;
+  margin-top: var(--space-1);
+  line-height: 1.5;
+}
+
+.stock-copy,
+.bring-amount {
+  flex: none;
+  text-align: right;
+}
+
+.stock-copy strong,
+.stock-copy small,
+.bring-amount strong,
+.bring-amount small {
+  display: block;
+}
+
+.stock-copy strong,
+.bring-amount strong {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.bring-amount.text-warning small,
+.bring-amount.text-danger small,
+.bring-amount.text-muted small {
+  color: currentColor;
+  opacity: 0.9;
+}
+
+.app-empty-state--compact {
+  padding-block: var(--space-4);
+}
+
+/* Medication management */
+.medications-page-head {
+  align-items: center;
+}
+
+.add-medication-btn,
+.compact-action {
+  flex: none;
+  padding-inline: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.medication-sections {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.medication-person-section {
+  min-width: 0;
+}
+
+.medication-person-heading {
+  padding-bottom: var(--space-2);
+  border-bottom: var(--stroke-strong) solid var(--ink);
+}
+
+.medication-person-heading h2 {
+  font-size: var(--text-lg);
+}
+
+.manage-list {
+  border-bottom: var(--stroke-thin) solid var(--line);
+}
+
+.manage-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  align-items: stretch;
+  border-bottom: var(--stroke-thin) solid var(--line);
+}
+
+.manage-row:last-child {
+  border-bottom: 0;
+}
+
+.manage-main {
+  min-width: 0;
+  padding: var(--space-4) 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+}
+
+.manage-copy {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-1);
+}
+
+.manage-copy strong {
+  overflow-wrap: anywhere;
+  font-size: var(--text-md);
+  line-height: 1.4;
+}
+
+.manage-row .manage-copy small {
+  margin: 0;
+}
+
+.manage-stock-button {
+  align-self: center;
+  min-width: 6rem;
+  min-height: 48px;
+  padding: var(--space-2) var(--space-3);
+  border: var(--stroke-strong) solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--ink);
+  text-align: right;
+}
+
+.manage-stock-button strong,
+.manage-stock-button small {
+  display: block;
+  white-space: nowrap;
+}
+
+.manage-stock-button strong {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.manage-stock-button small {
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+}
+
+.manage-stock-button[data-tone="success"] small {
+  color: var(--success);
+}
+
+.manage-stock-button[data-tone="warning"] small {
+  color: var(--warning);
+}
+
+.manage-stock-button[data-tone="danger"] small {
+  color: var(--danger);
+}
+
+.manage-stock-button[data-tone="neutral"] small {
+  color: var(--muted);
+}
+
+.manage-main:focus-visible,
+.manage-stock-button:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+/* Settings */
+.settings-section .section-heading {
+  align-items: center;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 68px;
+  padding: var(--space-3) 0;
+  border-bottom: var(--stroke-thin) solid var(--line);
+}
+
+.settings-copy {
+  min-width: 0;
+}
+
+.settings-copy strong {
+  overflow-wrap: anywhere;
+}
+
+.settings-row .button-row {
+  flex: none;
+}
+
+.settings-row small {
+  display: block;
+  margin-top: var(--space-1);
+}
+
+.backup-actions {
+  padding: var(--space-3) 0 var(--space-4);
+  border-bottom: var(--stroke-thin) solid var(--line);
+}
+
+.usage-alert {
+  margin-top: var(--space-7);
+}
+
+/* Navigation */
+.bottom-nav {
+  position: fixed;
+  z-index: 10;
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+  left: 50%;
+  display: grid;
+  width: min(calc(100% - 2rem), 440px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border: var(--stroke-strong) solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+  transform: translateX(-50%);
+}
+
+.nav-btn {
+  min-height: var(--hit-target);
+  border: var(--stroke-strong) solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  font-weight: var(--weight-bold);
+}
+
+.nav-btn[aria-current="page"] {
+  border-color: var(--ink);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Form composition */
+.field-group {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field-group legend {
+  margin-bottom: 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+}
+
+.form-divider {
+  border-top: var(--stroke-strong) solid var(--ink);
+}
+
+.input-affix {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.input-affix > span {
+  color: var(--muted);
+  font-weight: var(--weight-medium);
+}
+
+.split-actions {
+  justify-content: space-between;
+}
+
+.form-note {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.baseline-note {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.baseline-note small {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+/* Medication form controls */
+.dose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.dose-control {
+  padding: var(--space-3);
+  border: var(--stroke-strong) solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+}
+
+.dose-control .field-label {
+  text-align: left;
+}
+
+.dose-control .input {
+  background: var(--surface);
+}
+
+.dose-input {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.weekday-picker {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+}
+
+.weekday-picker label {
+  position: relative;
+}
+
+.weekday-picker input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.weekday-picker span {
+  display: grid;
+  min-height: var(--hit-target);
+  place-items: center;
+  border: var(--stroke-strong) solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: var(--weight-bold);
+  user-select: none;
+}
+
+.weekday-picker input:checked + span {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: var(--shadow-selected);
+}
+
+.weekday-picker input:focus-visible + span {
+  outline: var(--stroke-strong) solid var(--focus);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .manage-stock-button:hover {
+    background: var(--surface-muted);
+  }
+
+  .nav-btn:hover {
+    color: var(--ink);
+  }
+}
+
+/* Recovery */
+.recovery-shell {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100dvh;
+  place-items: center;
+  padding: var(--space-5);
+}
+
+.recovery-panel {
+  width: min(100%, 36rem);
+  padding: var(--space-6);
+}
+
+.recovery-brand {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: var(--stroke-strong) solid var(--ink);
+}
+
+.recovery-panel h1 {
+  margin-bottom: var(--space-4);
+}
+
+.recovery-panel > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.recovery-actions {
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 620px) {
+  .app-shell {
+    padding-inline: var(--space-4);
+  }
+
+  .topbar {
+    padding-bottom: var(--space-4);
+  }
+
+  .brand > span {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding-top: var(--space-5);
+  }
+
+  .page-head {
+    display: block;
+  }
+
+  .medications-page-head {
+    display: flex;
+    align-items: center;
+  }
+
+  .settings-row {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 430px) {
+  .medication-row {
+    gap: var(--space-2);
+  }
+
+  .medication-title-line {
+    display: block;
+  }
+
+  .medication-title-line span {
+    display: block;
+    margin-top: var(--space-1);
+  }
+
+  .manage-row {
+    gap: var(--space-2);
+  }
+
+  .manage-stock-button {
+    min-width: 5rem;
+    padding-inline: var(--space-2);
+  }
+
+  .weekday-picker span {
+    font-size: var(--text-sm);
+  }
+
+  .settings-row {
+    gap: var(--space-2);
+  }
+
+  .settings-row .button-row {
+    flex-wrap: nowrap;
+  }
+
+  .split-actions {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 800px) {
+  .bottom-nav {
+    right: calc((100vw - 720px) / 2 + var(--space-5));
+    left: auto;
+    width: 340px;
+    transform: none;
+  }
+}
