@@ -25,10 +25,7 @@ export type AsNeededSchedule = {
 };
 
 export type Schedule =
-  | DailySchedule
-  | WeeklySchedule
-  | IntervalSchedule
-  | AsNeededSchedule;
+  DailySchedule | WeeklySchedule | IntervalSchedule | AsNeededSchedule;
 
 export type DosePoint = {
   date: string;
