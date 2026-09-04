@@ -312,6 +312,10 @@
   font-size: var(--text-lg);
 }
 
+.medication-person-heading + .app-empty-state--compact {
+  margin-top: var(--space-3);
+}
+
 .manage-list {
   border-bottom: var(--stroke-thin) solid var(--line);
 }
