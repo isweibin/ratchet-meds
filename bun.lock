@@ -5,7 +5,7 @@
     "": {
       "name": "ratchet-meds",
       "dependencies": {
-        "@isweibin/vector-sigma": "github:isweibin/vector-sigma#v1.0.0",
+        "@isweibin/vector-sigma": "github:isweibin/vector-sigma#v1.0.1",
       },
       "devDependencies": {
         "prettier": "3.9.6",
@@ -15,7 +15,7 @@
     },
   },
   "packages": {
-    "@isweibin/vector-sigma": ["@isweibin/vector-sigma@github:isweibin/vector-sigma#f74659c", {}, "isweibin-vector-sigma-f74659c", "sha512-tk/WuAKG+I+gA2kafBErM6lisdDglE2YlxUr8xE3IS99E5jCIzPEDkbHs4h6p4QoLvFsiijH358G47mmIKUtDQ=="],
+    "@isweibin/vector-sigma": ["@isweibin/vector-sigma@github:isweibin/vector-sigma#e460479", {}, "isweibin-vector-sigma-e460479", "sha512-YxgBZBkn1p8g+5dfpdsEM/ueJbO6r5Oix9hHpJcxt0cOtfm7XzaVA2o2JCPDxFBG9QfnYOutdn8AcQlCsqZetw=="],
 
     "@oxc-project/types": ["@oxc-project/types@0.148.0", "", {}, "sha512-Nm4s/jB+4FpFsPhWGEC4h7rzksesmtnMXomo6rCMcg/b8zLQuOziRgkCS1fxDCXOlJB/6Q8oABOZ/OP6RIPj9A=="],
 
