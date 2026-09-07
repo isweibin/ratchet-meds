@@ -45,7 +45,7 @@ export function scheduleSummary(medication: Medication): string {
     .filter(([, amount]) => amount > 0)
     .map(
       ([period, amount]) =>
-        `${periodLabel(period)} ${formatQuantity(amount)}${escapeHtml(medication.unit)}`,
+        `${periodLabel(period)} ${formatQuantity(amount)} ${escapeHtml(medication.unit)}`,
     )
     .join(" · ");
 
