@@ -55,8 +55,11 @@ export function formatDate(value: string): string {
     return "—";
   }
 
-  const date = parseDate(value);
-  return `${date.getUTCMonth() + 1} 月 ${date.getUTCDate()} 日`;
+  return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "UTC",
+    month: "short",
+    day: "numeric",
+  }).format(parseDate(value));
 }
 
 export function formatFullDate(value: string): string {
@@ -64,6 +67,10 @@ export function formatFullDate(value: string): string {
     return "—";
   }
 
-  const date = parseDate(value);
-  return `${date.getUTCFullYear()} 年 ${date.getUTCMonth() + 1} 月 ${date.getUTCDate()} 日`;
+  return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "UTC",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(parseDate(value));
 }
